@@ -3,14 +3,14 @@ package tool;
 import java.util.Arrays;
 
 /**
- * @Classname TestHelper
+ * @Classname ArraysTestHelper
  * @Created by zgw
  * @Date 2018-11-25 14:19
- * @Description 对数器，验证算法是否正确的一种方式
+ * @Description 数组的对数器，验证算法是否正确的一种方式
  *
  * 随机产生数组，通过自己的排序算法与系统提供的排序算法进行排序，比较两者排序结果是否相同
  */
-public class TestHelper {
+public class ArraysTestHelper {
     /**
      * 系统提供的绝对正确的排序方法进行排序
      * @param arr

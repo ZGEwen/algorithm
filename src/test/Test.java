@@ -1,9 +1,7 @@
 package test;
 
 import sort.InsertionSort;
-import tool.TestHelper;
-
-import static sort.BubbleSort.bubbleSort;
+import tool.ArraysTestHelper;
 
 /**
  * @Classname Test
@@ -21,24 +19,27 @@ public class Test {
         int maxValue = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
-            int[] arr1 = TestHelper.generateRandomArray(maxSize, maxValue);
-            int[] arr2 = TestHelper.copyArray(arr1);
+            int[] arr1 = ArraysTestHelper.generateRandomArray(maxSize, maxValue);
+            int[] arr2 = ArraysTestHelper.copyArray(arr1);
             //自己的方法排序
             // bubbleSort(arr1);
             InsertionSort.insertionSort(arr1);
             //绝对正确的方法排序
-            TestHelper.comparator(arr2);
-            if (!TestHelper.isEqual(arr1, arr2)) {
+            ArraysTestHelper.comparator(arr2);
+            if (!ArraysTestHelper.isEqual(arr1, arr2)) {
+                //打印错误时的示例
+                ArraysTestHelper.printArray(arr1);
+                ArraysTestHelper.printArray(arr2);
                 succeed = false;
                 break;
             }
         }
         System.out.println(succeed ? "自己的方法能够正确的进行排序" : "Error：自己的方法不能正确的进行排序");
 
-        int[] arr = TestHelper.generateRandomArray(maxSize, maxValue);
-        TestHelper.printArray(arr);
+        int[] arr = ArraysTestHelper.generateRandomArray(maxSize, maxValue);
+        ArraysTestHelper.printArray(arr);
         // bubbleSort(arr);
         InsertionSort.insertionSort(arr);
-        TestHelper.printArray(arr);
+        ArraysTestHelper.printArray(arr);
     }
 }
