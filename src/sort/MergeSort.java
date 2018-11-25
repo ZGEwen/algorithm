@@ -4,7 +4,7 @@ package sort;
  * @Classname MergeSort
  * @Created by zgw
  * @Date 2018-11-25 15:58
- * @Description 归并排序
+ * @Description 归并排序--分治
  *
  * 将待排序部分分为两部分，先使两小部分分别有序，再进行归并操作使得整个也有序
  */
