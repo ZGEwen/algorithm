@@ -21,7 +21,7 @@ public class MergeSort {
         if (l == r) {
             return;
         }
-        //l和r中点mid
+        //l和r中点mid  a/2=a>>1 防止溢出
         int mid = l + ((r - l) >> 1);
         mergeSort(arr, l, mid);//T(N/2)
         mergeSort(arr, mid + 1, r);//T(N/2)
