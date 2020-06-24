@@ -2,8 +2,8 @@
 ### Java template
 # Compiled class file
 *.class
-out/*
-.idea/*
+out
+.idea
 # Log file
 *.log
 # BlueJ files

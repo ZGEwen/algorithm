@@ -29,6 +29,7 @@ public class SmallSumUseMergeSort {
         }
         //中间位置
         int mid = l + ((r - l) >> 1);
+        //参数的小和为左侧merge时的小和 加 右侧merge小和 加 左右两侧merge时的小和
         return mergeSort(arr, l, mid) + mergeSort(arr, mid + 1, r) + merge(arr, l, mid, r);
     }
 
@@ -39,7 +40,7 @@ public class SmallSumUseMergeSort {
         int p2 = m + 1;
         int res = 0;
         while (p1 <= m && p2 <= r) {
-            //如果p2比p1小，产生的小和是  p2到该有序部分末尾的个数  *  p1位置数组的值
+            //如果p1比p2小，产生的小和是  p2到该有序部分末尾的个数  *  p1位置数组的值
             res += arr[p1] < arr[p2] ? (r - p2 + 1) * arr[p1] : 0;
             help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
         }

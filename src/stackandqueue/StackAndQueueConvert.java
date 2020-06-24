@@ -115,6 +115,20 @@ public class StackAndQueueConvert {
             }
             return stackPop.peek();
         }
+
+        /**
+         * 从push栈转换到pop栈中，这个转换可以发生在任意时刻，只要满足下面的两个条件
+         */
+        public void trans(){
+            //pop栈非空，不能转换
+            if (!stackPop.isEmpty()){
+                return;
+            }
+            //push栈非空，将push栈全部转换到pop栈中
+            while (!stackPush.isEmpty()){
+                stackPop.push(stackPush.pop());
+            }
+        }
     }
 
 }

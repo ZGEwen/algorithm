@@ -35,7 +35,7 @@ public class Test {
         //     }
         // }
         // System.out.println(succeed ? "自己的方法能够正确的进行排序" : "Error：自己的方法不能正确的进行排序");
-
+        
         int[] arr = ArraysTestHelper.generateRandomArray(maxSize, maxValue);
         ArraysTestHelper.printArray(arr);
         // bubbleSort(arr);

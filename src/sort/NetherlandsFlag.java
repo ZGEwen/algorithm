@@ -24,6 +24,7 @@ public class NetherlandsFlag {
     public static int[] partition(int[] arr, int l, int r, int p) {
         int less = l - 1;
         int more = r + 1;
+        //当前位置
         while (l < more) {
             if (arr[l] < p) {
                 //比p小的放数组左边
