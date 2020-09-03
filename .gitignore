@@ -4,6 +4,10 @@
 *.class
 out
 .idea
+ali-coding
+coding-interview-guide
+geekbang
+nowcoder
 # Log file
 *.log
 # BlueJ files
